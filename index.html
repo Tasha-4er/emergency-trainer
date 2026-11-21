@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тренажёр действий при ЧС — ОБЗР 8–11 класс</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <h1>Тренажёр действий при ЧС</h1>
+      <p class="subtitle">Учебный проект по ОБЗР · 8–11 класс</p>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Главный экран -->
+    <section id="screen-home" class="screen active">
+      <h2 class="screen-title">Выбери ситуацию</h2>
+      <p class="screen-subtitle">Каждый сценарий — это путь решений. Выбирай действие и смотри, к чему оно приводит.</p>
+      <div class="scenario-grid" id="scenarioGrid"></div>
+      <div class="history-link">
+        <button id="btnShowHistory" class="btn-secondary">История прохождений</button>
+      </div>
+    </section>
+
+    <!-- Экран сценария -->
+    <section id="screen-scenario" class="screen">
+      <button id="btnBackHome" class="btn-back">← На главную</button>
+      <div class="scenario-header">
+        <h2 id="scenarioTitle"></h2>
+        <p id="stepCounter" class="step-counter"></p>
+        <div class="progress-bar" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+      <div id="scenarioContent">
+        <p id="stepText" class="step-text"></p>
+        <p id="stepQuestion" class="step-question"></p>
+        <div id="optionsContainer" class="options-container"></div>
+        <div id="explanationBox" class="explanation-box hidden">
+          <p id="explanationText"></p>
+          <button id="btnNextStep" class="btn-primary">Дальше</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Экран результата -->
+    <section id="screen-result" class="screen">
+      <h2 class="screen-title">Результат</h2>
+      <div id="resultSummary" class="result-summary"></div>
+      <button id="btnResultHome" class="btn-primary">На главную</button>
+    </section>
+
+    <!-- Экран истории -->
+    <section id="screen-history" class="screen">
+      <h2 class="screen-title">История прохождений</h2>
+      <div id="historyList" class="history-list"></div>
+      <button id="btnHistoryHome" class="btn-secondary">На главную</button>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Учебный проект · данные сохраняются в браузере</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
